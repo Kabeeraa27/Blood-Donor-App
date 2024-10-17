@@ -28,7 +28,7 @@ The Blood Donor App is an Android application designed to connect blood donors w
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/kabee/blood-donor-app.git
+https://github.com/Kabeeraa27/Blood-Donor-App.git
 ```
 
 
