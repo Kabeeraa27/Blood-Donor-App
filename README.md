@@ -31,19 +31,18 @@ The Blood Donor App is an Android application designed to connect blood donors w
 git clone https://github.com/Kabeeraa27/Blood-Donor-App.git
 ```
 
-
-3. **Open the project in Android Studio:**
+2. **Open the project in Android Studio:**
   Launch Android Studio and select "Open an existing Android Studio project."
   Navigate to the cloned repository folder and select it.
 
-4. **Set up the local SQL Browser database:**
+3. **Set up the local SQL Browser database:**
   Ensure you have SQL Browser installed and set up on your local machine.
   Create the necessary tables and schemas required for the app.
 
-5. **Build the project:**
+4. **Build the project:**
    Click on "Build" in the menu and select "Make Project" to compile the app.
 
-6. **Run the app:**
+5. **Run the app:**
   Connect your Android device or start an emulator.
   Click on the green "Run" button in Android Studio to deploy the app.
 
