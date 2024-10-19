@@ -15,65 +15,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Blood Donor App"
-        android:textSize="45dp"/>
+        android:textSize="45sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/eid"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout"
-        android:orientation="vertical"
-        android:paddingVertical="50dp"
-        android:gravity="center"
-        >
+        android:ems="10"
+        android:hint="Enter Donor ID"
+        android:inputType="number"
+        android:gravity="center" />
 
-        <EditText
-            android:id="@+id/eid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter Donor ID"
-            android:inputType="text"
-            android:gravity="center"
-            />
+    <EditText
+        android:id="@+id/fn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter First Name"
+        android:inputType="text"
+        android:gravity="center" />
 
-        <EditText
-            android:id="@+id/fn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter First Name"
-            android:inputType="text"
-            android:gravity="center"
-            />
+    <EditText
+        android:id="@+id/ln"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Last Name"
+        android:inputType="text"
+        android:gravity="center" />
 
-        <EditText
-            android:id="@+id/ln"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter Last Name"
-            android:inputType="text"
-            android:gravity="center"
-            />
+    <EditText
+        android:id="@+id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Blood Group"
+        android:inputType="text"
+        android:textAlignment="center" />
 
-        <EditText
-            android:id="@+id/bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Blood Group"
-            android:inputType="text"
-            android:textAlignment="center" />
-    </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
         android:text="Submit"
-        android:onClick="getData"/>
+        android:onClick="getData" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetch Data"
+        android:onClick="fetchData" />
 
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetched Data Will Appear Here"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

@@ -4,17 +4,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText eid, fn, ln, bg;
-    Button button;
+    EditText eid, fn, ln, bg; // Removed editText for fetching
+    TextView tv1;
+    Button button, button2;
     DBhelper dbhelper;
 
     @Override
@@ -27,14 +26,10 @@ public class MainActivity extends AppCompatActivity {
         ln = findViewById(R.id.ln);
         bg = findViewById(R.id.bg);
         button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
+        tv1 = findViewById(R.id.tv1);
 
-        dbhelper = new DBhelper(getApplicationContext());
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        dbhelper = new DBhelper(this);
     }
 
     public void getData(View view) {
@@ -43,7 +38,18 @@ public class MainActivity extends AppCompatActivity {
         String lname1 = ln.getText().toString();
         String bgroup1 = bg.getText().toString();
 
-        dbhelper.getDataHelper(id1,fname1, lname1, bgroup1);
+        dbhelper.getDataHelper(id1, fname1, lname1, bgroup1);
         Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show();
+    }
+
+    public void fetchData(View view) {
+        String result = dbhelper.fetchDataHelper(); // Fetch all data without filters
+
+        if (result.isEmpty()) {
+            tv1.setText("No data found.");
+        } else {
+            tv1.setText(result);
+        }
+        Toast.makeText(this, "Fetch Successful", Toast.LENGTH_SHORT).show();
     }
 }
